@@ -1,0 +1,42 @@
+.result {
+	display: flex;
+	flex-direction: column;
+	font-weight: 700;
+	color: $White;
+	border-radius: 1.25rem;
+	background-color: $Very-dark-cyan;
+	padding: 1.5rem;
+	gap: 2rem;
+
+	&__btn {
+		border-radius: .35rem;
+		font-size: 1.25rem;
+		font-weight: 700;
+		background-color: $Strong-cyan;
+		text-transform: uppercase;
+		padding: .75rem;
+		color: $Very-dark-cyan;
+	}
+}
+.result-tip {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1rem;
+	
+	&__text {
+	}
+
+	&__title {
+		color: $White;
+	}
+
+	&__subtitle {
+		color: $Dark-grayish-cyan;
+	}
+
+	&__tip {
+		font-size: 1.75rem;
+		color: $Strong-cyan;
+	}
+}

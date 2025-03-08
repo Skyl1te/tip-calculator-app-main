@@ -1,0 +1,18 @@
+.input {
+	color: $Very-dark-cyan;
+	font-weight: 700;
+	text-align: right;
+	padding: 0.75rem 1.2rem;
+	font-size: 1.2rem;
+	background-color: $Very-light-grayish-cyan;
+	margin-top: 0.4rem;
+
+	&::before {
+		
+	}
+}
+
+.input-title {
+	font-size: 1rem;
+	color: $Dark-grayish-cyan;
+}

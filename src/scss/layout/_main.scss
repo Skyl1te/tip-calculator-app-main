@@ -1,0 +1,10 @@
+.main {
+	display: grid;
+	grid-template-columns: 1fr;
+	place-content: center;
+	gap: 2rem;
+	border-radius: 1rem;
+	padding: 1.5rem;
+	background-color: $White;
+	max-width: 425px;
+}

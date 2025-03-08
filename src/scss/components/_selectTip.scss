@@ -1,0 +1,36 @@
+.select-tip {
+	&__btns {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: .75rem;
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	&__btn {
+		font-size: 1.25rem;
+		padding: 0.75rem;
+		background-color: $Very-dark-cyan;
+		color: $White;
+		font-weight: 700;
+		border-radius: .35rem;
+		cursor: pointer;
+		transition: all .15s linear;
+
+		&:focus, &:hover {
+			color: $Very-dark-cyan;
+			background-color: $Strong-cyan;
+			transition: all .15s linear;
+		}
+
+		&:last-child, &:last-child::placeholder {
+			max-width: 142px;
+			font-size: 1.6rem;
+			text-align: right;
+			color: $Dark-grayish-cyan;
+			background-color: $Very-light-grayish-cyan;
+		}
+	}
+}
+.input-title {
+}

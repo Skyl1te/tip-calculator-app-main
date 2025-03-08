@@ -1,0 +1,139 @@
+.input {
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  text-align: right;
+  padding: 0.75rem 1.2rem;
+  font-size: 1.2rem;
+  background-color: hsl(189, 41%, 97%);
+  margin-top: 0.4rem;
+}
+.input-title {
+  font-size: 1rem;
+  color: hsl(186, 14%, 43%);
+}
+
+.active {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%) !important;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: normal;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(185, 41%, 84%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  border: 0;
+}
+
+button {
+  border: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+  max-width: 425px;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+}
+.people-amount {
+  display: flex;
+  flex-direction: column;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  border-radius: 1.25rem;
+  background-color: hsl(183, 100%, 15%);
+  padding: 1.5rem;
+  gap: 2rem;
+}
+.result__btn {
+  border-radius: 0.35rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: hsl(172, 67%, 45%);
+  text-transform: uppercase;
+  padding: 0.75rem;
+  color: hsl(183, 100%, 15%);
+}
+
+.result-tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.result-tip__title {
+  color: hsl(0, 0%, 100%);
+}
+.result-tip__subtitle {
+  color: hsl(186, 14%, 43%);
+}
+.result-tip__tip {
+  font-size: 1.75rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.select-tip__btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+.select-tip__btn {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.select-tip__btn:focus, .select-tip__btn:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  transition: all 0.15s linear;
+}
+.select-tip__btn:last-child, .select-tip__btn:last-child::placeholder {
+  max-width: 142px;
+  font-size: 1.6rem;
+  text-align: right;
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(189, 41%, 97%);
+}

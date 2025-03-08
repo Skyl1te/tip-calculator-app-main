@@ -30,6 +30,12 @@ function setTip() {
 	})
 	selectTipBtns.forEach(tipBtn => {
 		tipBtn.addEventListener('click', () => {
+			selectTipBtns.forEach(tipBtn => {
+				tipBtn.classList.remove('active')
+			})
+			if (tipBtn != customTip) {
+				tipBtn.classList.add('active')
+			}
 			tipValue = parseFloat(tipBtn.value)
 			customTip.value = ''
 			calculateTip(billValue, tipValue, peopleAmountValue)

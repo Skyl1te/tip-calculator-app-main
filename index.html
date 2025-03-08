@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,20 +20,25 @@
 </head>
 <body>
 
-  <main>
+  <h1>splitter</h1>
+
+  <main class="main">
     <div class="bill">
       <label for="bill" class="input-title">Bill</label>
-      <input id="bill" type="number" class="bill__input input">
+      <input id="bill" type="number" class="bill__input input" placeholder="$">
     </div>
 
     <div class="select-tip">
       <label for="customTip" class="input-title">Select Tip %</label>
-      <button class="select-tip__btn" value="5">5%</button>
-      <button class="select-tip__btn" value="10">10%</button>
-      <button class="select-tip__btn" value="15">15%</button>
-      <button class="select-tip__btn" value="25">25%</button>
-      <button class="select-tip__btn" value="50">50%</button>
-      <input id="customTip" type="number" placeholder="Custom">
+      <div class="select-tip__btns">
+
+        <button class="select-tip__btn" value="5">5%</button>
+        <button class="select-tip__btn" value="10">10%</button>
+        <button class="select-tip__btn" value="15">15%</button>
+        <button class="select-tip__btn" value="25">25%</button>
+        <button class="select-tip__btn" value="50">50%</button>
+        <input id="customTip" type="number" placeholder="Custom" class="select-tip__btn">
+      </div>
     </div>
     
     <div class="people-amount">
@@ -58,17 +67,10 @@
       <button class="result__btn" id="resetBtn">Reset</button>
     </div>
   </main>
-  
 
-  
 
-  
-  
 
-  
-  
 
-  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
