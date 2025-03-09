@@ -33,8 +33,6 @@ function calculateTip(billValue, tipValue, peopleAmountValue) {
 	totalResult.textContent = `$${total.toFixed(2)}`
 }
 
-
-
 function setTip() {
 	customTip.addEventListener('input', () => {
 		if (customTip.value.trim() != '') {

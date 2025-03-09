@@ -2,18 +2,3 @@
 	color: $Very-dark-cyan !important;
 	background-color: $Strong-cyan !important;
 }
-
-.error {
-	color: orangered;
-	outline-color: orangered;
-	visibility: visible;
-
-	&:focus {
-		outline-color: orangered;
-	}
-}
-
-.unavailable {
-	opacity: .2;
-	cursor: not-allowed !important;
-}

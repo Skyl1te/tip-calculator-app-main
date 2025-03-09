@@ -1,0 +1,9 @@
+.error {
+	color: orangered;
+	outline-color: orangered;
+	visibility: visible;
+
+	&:focus {
+		outline-color: orangered;
+	}
+}

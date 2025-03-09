@@ -82,6 +82,11 @@ body {
   background-color: hsl(185, 41%, 84%);
 }
 
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
 body, input, button, p {
   padding: 0;
   margin: 0;
