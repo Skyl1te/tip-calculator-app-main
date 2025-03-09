@@ -5,3 +5,10 @@
 	&__input {
 	}
 }
+
+
+@media (min-width: 1024px) {
+	.people-amount {
+		grid-column: 1;
+	}
+}

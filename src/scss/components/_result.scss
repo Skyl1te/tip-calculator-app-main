@@ -15,7 +15,14 @@
 		background-color: $Strong-cyan;
 		text-transform: uppercase;
 		padding: .75rem;
+		cursor: pointer;
 		color: $Very-dark-cyan;
+		transition: all .15s ease-in;
+
+		&:hover {
+			filter: brightness(1.2);
+			transition: all .15s linear;
+		}
 	}
 }
 .result-tip {
@@ -38,5 +45,13 @@
 	&__tip {
 		font-size: 1.75rem;
 		color: $Strong-cyan;
+	}
+}
+
+@media (min-width: 1024px) {
+	.result {
+		grid-column: 2;
+		grid-row: 1 / 4;
+		justify-content: space-between;
 	}
 }

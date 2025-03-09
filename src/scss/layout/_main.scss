@@ -8,3 +8,12 @@
 	background-color: $White;
 	max-width: 425px;
 }
+
+@media (min-width: 1024px) {
+	.main {
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 860px;
+		gap: 2.5rem;
+		padding: 2rem;
+	}
+}

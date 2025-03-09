@@ -37,7 +37,7 @@
         <button class="select-tip__btn" value="15">15%</button>
         <button class="select-tip__btn" value="25">25%</button>
         <button class="select-tip__btn" value="50">50%</button>
-        <input id="customTip" type="number" placeholder="Custom" class="select-tip__btn">
+        <input id="customTip" type="number" placeholder="Custom" class="select-tip__btn input">
       </div>
     </div>
     
@@ -47,21 +47,21 @@
     </div>
 
     <div class="result">
-      
-      <div class="result-tip">
-        <div class="result-tip__text">
-          <p class="result-tip__title">Tip Amount</p>
-          <p class="result-tip__subtitle">/ person</p>
+      <div>
+        <div class="result-tip">
+          <div class="result-tip__text">
+            <p class="result-tip__title">Tip Amount</p>
+            <p class="result-tip__subtitle">/ person</p>
+          </div>
+          <span class="result-tip__tip" id="amountResult">0.00</span>
         </div>
-        <span class="result-tip__tip" id="amountResult">0.00</span>
-      </div>
-
-      <div class="result-tip">
-        <div class="result-tip__text">
-          <p class="result-tip__title">Total</p>
-          <p class="result-tip__subtitle">/ person</p>
+        <div class="result-tip">
+          <div class="result-tip__text">
+            <p class="result-tip__title">Total</p>
+            <p class="result-tip__subtitle">/ person</p>
+          </div>
+          <span class="result-tip__tip" id="totalResult">0.00</span>
         </div>
-        <span class="result-tip__tip" id="totalResult">0.00</span>
       </div>
 
       <button class="result__btn" id="resetBtn">Reset</button>

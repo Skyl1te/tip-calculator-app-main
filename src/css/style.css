@@ -6,6 +6,14 @@
   font-size: 1.2rem;
   background-color: hsl(189, 41%, 97%);
   margin-top: 0.4rem;
+  outline: 2px solid hsl(189, 41%, 97%);
+  transition: all 0.12s linear;
+  cursor: pointer;
+  border-radius: 0.35rem;
+}
+.input:hover, .input:focus {
+  outline-color: hsl(172, 67%, 45%);
+  transition: all 0.12s linear;
 }
 .input-title {
   font-size: 1rem;
@@ -13,7 +21,7 @@
 }
 
 .active {
-  color: hsl(183, 100%, 15%);
+  color: hsl(183, 100%, 15%) !important;
   background-color: hsl(172, 67%, 45%) !important;
 }
 
@@ -33,23 +41,23 @@ body {
   background-color: hsl(185, 41%, 84%);
 }
 
-body {
+body, input, button, p {
   padding: 0;
   margin: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
-input {
-  border: 0;
-}
-
-button {
-  border: 0;
-}
-
-p {
-  padding: 0;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .main {
@@ -63,13 +71,31 @@ p {
   max-width: 425px;
 }
 
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+}
 .bill {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 1024px) {
+  .bill {
+    grid-column: 1;
+  }
+}
 .people-amount {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .people-amount {
+    grid-column: 1;
+  }
 }
 .result {
   display: flex;
@@ -88,7 +114,13 @@ p {
   background-color: hsl(172, 67%, 45%);
   text-transform: uppercase;
   padding: 0.75rem;
+  cursor: pointer;
   color: hsl(183, 100%, 15%);
+  transition: all 0.15s ease-in;
+}
+.result__btn:hover {
+  filter: brightness(1.2);
+  transition: all 0.15s linear;
 }
 
 .result-tip {
@@ -108,6 +140,13 @@ p {
   color: hsl(172, 67%, 45%);
 }
 
+@media (min-width: 1024px) {
+  .result {
+    grid-column: 2;
+    grid-row: 1/4;
+    justify-content: space-between;
+  }
+}
 .select-tip__btns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -123,10 +162,11 @@ p {
   font-weight: 700;
   border-radius: 0.35rem;
   cursor: pointer;
-  transition: all 0.15s linear;
+  transition: all 0.15s ease-in;
 }
-.select-tip__btn:focus, .select-tip__btn:hover {
+.select-tip__btn:hover {
   color: hsl(183, 100%, 15%);
+  filter: brightness(1.2);
   background-color: hsl(172, 67%, 45%);
   transition: all 0.15s linear;
 }
@@ -136,4 +176,21 @@ p {
   text-align: right;
   color: hsl(186, 14%, 43%);
   background-color: hsl(189, 41%, 97%);
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .select-tip {
+    grid-column: 1;
+  }
+  .select-tip__btns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .select-tip__btn {
+    width: 112px;
+    height: 2.8rem;
+  }
+  .select-tip__btn:last-child, .select-tip__btn:last-child::placeholder {
+    font-size: 1.2rem;
+  }
 }

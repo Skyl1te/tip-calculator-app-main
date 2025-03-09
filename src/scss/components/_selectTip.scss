@@ -15,10 +15,11 @@
 		font-weight: 700;
 		border-radius: .35rem;
 		cursor: pointer;
-		transition: all .15s linear;
+		transition: all .15s ease-in;
 
-		&:focus, &:hover {
+		&:hover {
 			color: $Very-dark-cyan;
+			filter: brightness(1.2);
 			background-color: $Strong-cyan;
 			transition: all .15s linear;
 		}
@@ -29,8 +30,31 @@
 			text-align: right;
 			color: $Dark-grayish-cyan;
 			background-color: $Very-light-grayish-cyan;
+			margin: 0;
 		}
 	}
 }
 .input-title {
+}
+
+
+@media (min-width: 1024px) {
+	.select-tip {
+		grid-column: 1;
+
+		&__btns {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__btn {
+			width: 112px;
+			height: 2.8rem;
+
+
+			&:last-child, &:last-child::placeholder {
+				
+				font-size: 1.2rem;
+			}
+		}
+	}
 }

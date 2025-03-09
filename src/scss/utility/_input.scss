@@ -6,6 +6,16 @@
 	font-size: 1.2rem;
 	background-color: $Very-light-grayish-cyan;
 	margin-top: 0.4rem;
+	outline: 2px solid $Very-light-grayish-cyan;
+	transition: all .12s linear;
+	cursor: pointer;
+	border-radius: .35rem;
+	
+	&:hover, &:focus {
+		outline-color: $Strong-cyan;
+		// filter: brightness(1.3);
+		transition: all .12s linear;
+	}
 
 	&::before {
 		

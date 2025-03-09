@@ -1,7 +1,13 @@
 .bill {
 	display: flex;
 	flex-direction: column;
-	
 	&__input {
+	}
+}
+
+
+@media (min-width: 1024px) {
+	.bill {
+		grid-column: 1;
 	}
 }
