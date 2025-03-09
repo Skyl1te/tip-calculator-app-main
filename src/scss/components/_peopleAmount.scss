@@ -1,11 +1,10 @@
 .people-amount {
 	display: flex;
 	flex-direction: column;
-	
-	&__input {
-	}
 }
-
+#peopleError {
+	visibility: hidden;
+}
 
 @media (min-width: 1024px) {
 	.people-amount {

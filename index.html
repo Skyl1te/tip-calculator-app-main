@@ -25,14 +25,17 @@
   <main class="main">
     <div class="bill">
       <label for="bill" class="input-title">Bill</label>
-      <input id="bill" type="number" class="bill__input input" placeholder="$">
+      <div class="input-wrapper">
+        <span class="input-wrapper__symbol">$</span>
+        <input id="bill" type="number" class="bill__input input" placeholder="0">
+      </div>
     </div>
 
     <div class="select-tip">
       <label for="customTip" class="input-title">Select Tip %</label>
       <div class="select-tip__btns">
 
-        <button class="select-tip__btn" value="5">5%</button>
+        <button class="select-tip__btn active" value="5">5%</button>
         <button class="select-tip__btn" value="10">10%</button>
         <button class="select-tip__btn" value="15">15%</button>
         <button class="select-tip__btn" value="25">25%</button>
@@ -42,8 +45,14 @@
     </div>
     
     <div class="people-amount">
-      <label for="peopleAmount" class="input-title">Number of People</label>
-      <input id="peopleAmount" type="text" class="people-amount__input input">
+      <div class="input-title-wrapper">
+        <label for="peopleAmount" class="input-title">Number of People</label>
+        <label for="peopleAmount" id="peopleError" class="input-title">Can't be zero</label>
+      </div>
+      <div class="input-wrapper">
+        <img src="./images/user-solid.svg" alt="user" class="input-wrapper__symbol">
+        <input id="peopleAmount" type="number" class="people-amount__input input" placeholder="0">
+      </div>
     </div>
 
     <div class="result">

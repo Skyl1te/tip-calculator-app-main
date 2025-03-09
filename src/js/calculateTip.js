@@ -9,17 +9,31 @@ const totalResult = document.querySelector('#totalResult')
 
 const resetBtn = document.querySelector('#resetBtn')
 
+const peopleError =document.querySelector('#peopleError')
+
 let billValue = 0
 let tipValue = 5
-let peopleAmountValue = 1
+let peopleAmountValue = 0
 
 function calculateTip(billValue, tipValue, peopleAmountValue) {
-	let amount = (billValue * tipValue / 100) / peopleAmountValue
-	let total = billValue / peopleAmountValue + amount
+	let amount = 0
+	let total = 0
 
+	if (peopleAmountValue > 0) {
+		amount = (billValue * tipValue / 100) / peopleAmountValue
+		total = billValue / peopleAmountValue + amount
+	}
+	
+	if (isNaN(amount) && isNaN(total)) {
+		amount = 0
+		total = 0
+	}
+	
 	amountResult.textContent = `$${amount.toFixed(2)}`  
 	totalResult.textContent = `$${total.toFixed(2)}`
 }
+
+
 
 function setTip() {
 	customTip.addEventListener('input', () => {
@@ -27,6 +41,7 @@ function setTip() {
 			tipValue = parseFloat(customTip.value)
 			calculateTip(billValue, tipValue, peopleAmountValue)
 		}
+		checkResetBtn()
 	})
 	selectTipBtns.forEach(tipBtn => {
 		tipBtn.addEventListener('click', () => {
@@ -39,18 +54,39 @@ function setTip() {
 			tipValue = parseFloat(tipBtn.value)
 			customTip.value = ''
 			calculateTip(billValue, tipValue, peopleAmountValue)
+			checkResetBtn()
 		})
 	})
 
 	bill.addEventListener('input', () => {
 		billValue = parseFloat(bill.value)
 		calculateTip(billValue, tipValue, peopleAmountValue)
+		checkResetBtn()
 	})
 
 	peopleAmount.addEventListener('input', () => {
 		peopleAmountValue = parseFloat(peopleAmount.value)
+
+		if (peopleAmountValue == 0) {
+			peopleAmount.classList.add('error')
+			peopleError.classList.add('error')
+			peopleError.style.visibility = 'visible'
+		} else {
+			peopleAmount.classList.remove('error')
+			peopleError.classList.remove('error')
+			peopleError.style.visibility = 'hidden'
+		}
 		calculateTip(billValue, tipValue, peopleAmountValue)
+		checkResetBtn()
 	})
+}
+
+function checkResetBtn() {
+	if (bill.value == 0 && peopleAmount.value == 0) {
+		resetBtn.classList.add('unavailable')
+	} else {
+		resetBtn.classList.remove('unavailable')
+	}
 }
 
 function resetTip() {
@@ -68,6 +104,7 @@ function resetTip() {
 }
 
 setTip()
+checkResetBtn()
 
 resetBtn.addEventListener('click', () => {
 	resetTip()

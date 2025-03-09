@@ -10,19 +10,60 @@
   transition: all 0.12s linear;
   cursor: pointer;
   border-radius: 0.35rem;
+  width: 100%;
 }
 .input:hover, .input:focus {
   outline-color: hsl(172, 67%, 45%);
   transition: all 0.12s linear;
 }
+.input::placeholder {
+  color: hsl(184, 14%, 56%);
+  font-size: 1.2rem;
+  font-family: "Space Mono", monospace;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+.input-wrapper__symbol {
+  position: absolute;
+  top: 52%;
+  left: 1rem;
+  transform: translate(0%, -50%);
+  z-index: 2;
+  width: 0.8rem;
+  font-size: 1.5rem;
+  color: hsl(184, 14%, 56%);
+}
+
 .input-title {
   font-size: 1rem;
   color: hsl(186, 14%, 43%);
 }
 
+.input-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .active {
   color: hsl(183, 100%, 15%) !important;
   background-color: hsl(172, 67%, 45%) !important;
+}
+
+.error {
+  color: orangered;
+  outline-color: orangered;
+  visibility: visible;
+}
+.error:focus {
+  outline-color: orangered;
+}
+
+.unavailable {
+  opacity: 0.2;
+  cursor: not-allowed !important;
 }
 
 html {
@@ -83,6 +124,7 @@ input[type=number] {
   display: flex;
   flex-direction: column;
 }
+
 @media (min-width: 1024px) {
   .bill {
     grid-column: 1;
@@ -92,6 +134,11 @@ input[type=number] {
   display: flex;
   flex-direction: column;
 }
+
+#peopleError {
+  visibility: hidden;
+}
+
 @media (min-width: 1024px) {
   .people-amount {
     grid-column: 1;

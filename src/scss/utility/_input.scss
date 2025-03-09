@@ -10,6 +10,7 @@
 	transition: all .12s linear;
 	cursor: pointer;
 	border-radius: .35rem;
+	width: 100%;
 	
 	&:hover, &:focus {
 		outline-color: $Strong-cyan;
@@ -17,12 +18,33 @@
 		transition: all .12s linear;
 	}
 
-	&::before {
-		
+	&::placeholder {
+		color: $Grayish-cyan;
+		font-size: 1.2rem;
+		font-family: "Space Mono", monospace;
 	}
 }
 
+.input-wrapper {
+	position: relative;
+	width: 100%;
+	&__symbol {
+		position: absolute;
+		top: 52%;
+		left: 1rem;
+		transform: translate(0%, -50%);
+		z-index: 2;
+
+		width: 0.8rem;
+		font-size: 1.5rem;
+		color: $Grayish-cyan;
+	}
+}
 .input-title {
 	font-size: 1rem;
 	color: $Dark-grayish-cyan;
+}
+.input-title-wrapper {
+	display: flex;
+	justify-content: space-between;
 }
